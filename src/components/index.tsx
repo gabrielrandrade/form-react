@@ -1,14 +1,13 @@
-import { Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 import styles from "./styles";
 
-type Props = {
+type Props = TouchableOpacityProps & {
     label:String;
-    onPress:() =>void;
 };
 
-function Button({label, onPress}: Props) {
+function Button({label, ...rest}: Props) {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
+    <TouchableOpacity style={styles.button} {...rest}>
       <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>
   );
