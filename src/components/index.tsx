@@ -7,7 +7,7 @@ type Props = TouchableOpacityProps & {
 
 function Button({label, ...rest}: Props) {
   return (
-    <TouchableOpacity style={styles.button} {...rest}>
+    <TouchableOpacity activeOpacity={0.5} style={styles.button} {...rest}>
       <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>
   );
