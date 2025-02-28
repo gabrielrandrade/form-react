@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     padding: 12,
   },
+  label: {
+    fontSize: 14,
+    color:"#000",
+  },
 });
 
 export default styles;
