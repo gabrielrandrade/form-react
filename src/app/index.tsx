@@ -4,8 +4,7 @@ import Input from "../components/input";
 import { useState } from "react";
 
 function Index() {
-  const [name, setName] = useState<String>(""); // Inferindo a tipagem
-  const [name1, setName1] = useState(""); // Tipo  Explicitamente declarado
+  const [name, setName] = useState("usuário"); 
   
 
   function handleSubmit() {
@@ -20,7 +19,7 @@ function Index() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Olá, {name}</Text>
-      <Input label={"Nome"} onChangeText={(text) => onChangeText(text)}/>
+      <Input label={"Nome"} onChangeText= {setName}/>
       <Input label={"Idade"} />
       <Button label={"Enviar"} onPress={handleSubmit} activeOpacity={1}/>
       <Button label={"Salvar"} onPress={handleSubmit} />
